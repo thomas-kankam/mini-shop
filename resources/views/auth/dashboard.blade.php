@@ -29,14 +29,14 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
-                                <h5 class="card-title">Products</h5>
+                                <h5 class="card-title">Orders</h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="bi bi-people"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>{{ $users }}</h6>
+                                        <h6>{{ $orders }}</h6>
                                     </div>
                                 </div>
                             </div>

@@ -37,10 +37,11 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        $response = Http::get('http://62.129.149.138:8099/api/get-orders');
-        $data = $response['data']['orders'];
-        $users = count($data);
-        return view('auth.dashboard', compact('users'));
+        $getOrders = Http::get('http://62.129.149.138:8099/api/get-orders');
+        $getUsers = Http::get('http://62.129.149.138:8099/api/get-kay');
+        $users = count($getUsers['data']['kay']);
+        $orders = count($getOrders['data']['orders']);
+        return view('auth.dashboard', compact('users', 'orders'));
     }
     // public function table()
     // {
