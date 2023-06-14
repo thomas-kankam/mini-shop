@@ -66,7 +66,7 @@
                     <!-- End of Card 2 -->
 
                     <!-- Card 3 -->
-                    <div class="col-xxl-6 col-md-4">
+                    <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Successful Payments</h5>
