@@ -41,31 +41,7 @@ class UserController extends Controller
         $getUsers = Http::get('http://62.129.149.138:8099/api/get-kay');
         $users = count($getUsers['data']['kay']);
         $orders = count($getOrders['data']['orders']);
-        return view('auth.dashboard', compact('users', 'orders'));
+        $data = $getOrders['data']['orders'];
+        return view('auth.dashboard', compact('users', 'orders', 'data'));
     }
-    // public function table()
-    // {
-    //     // $clients = DB::table('dentsu_table')->get();
-    //     // return view('auth.table', compact('clients'));
-
-    //     $response = Http::get('http://62.129.149.138:8099/api/get-kay');
-    //     $tables = $response->json();
-    //     return view('auth.table', ['data' => $tables]);
-    // }
-
-    // public function create(UserRequest $req)
-    // {
-    //     $data = $req->validated();
-
-    //     User::create([
-    //         'name' => $data['name'],
-    //         'email' => $data['email'],
-    //         'role' => $data['role'],
-    //         'password' => Hash::make($data['password']),
-    //         'email_verified_at' => now(),
-    //         'remember_token' => Str::random(10),
-    //     ]);
-
-    //     return redirect()->back()->with("success", "Congratulations");
-    // }
 }
